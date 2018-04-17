@@ -1,4 +1,4 @@
-describe('TransactionBuilder', function() {
+describe.skip('TransactionBuilder', function() {
 
     describe("constructs a native payment transaction with one operation", function() {
         var source;

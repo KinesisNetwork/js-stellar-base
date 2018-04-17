@@ -102,7 +102,7 @@ export class TransactionBuilder {
 
     var attrs = {
       sourceAccount: Keypair.fromPublicKey(this.source.accountId()).xdrAccountId(),
-      fee:           this.baseFee * this.operations.length,
+      fee:           UnsignedHyper.fromString(this.baseFee),
       seqNum:        xdr.SequenceNumber.fromString(sequenceNumber.toString()),
       memo:          this.memo ? this.memo.toXDRObject() : null,
       ext:           new xdr.TransactionExt(0)
@@ -121,7 +121,7 @@ export class TransactionBuilder {
     let tx = new Transaction(xenv);
 
     this.source.incrementSequenceNumber();
-    
+
     return tx;
   }
 }

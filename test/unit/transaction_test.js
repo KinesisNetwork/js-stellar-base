@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-describe('Transaction', function() {
+describe.skip('Transaction', function() {
 
   it("constructs Transaction object from a TransactionEnvelope", function(done) {
     let source      = new StellarBase.Account("GBBM6BKZPEHWYO3E3YKREDPQXMS4VK35YLNU7NFBRI26RAN7GI5POFBB", "0");

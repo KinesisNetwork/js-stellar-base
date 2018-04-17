@@ -1,5 +1,5 @@
 {
-  "name": "stellar-base",
+  "name": "js-kinesis-base",
   "version": "0.7.7",
   "description": "Low level stellar support library",
   "main": "lib/index.js",

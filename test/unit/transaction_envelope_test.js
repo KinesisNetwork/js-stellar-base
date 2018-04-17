@@ -1,4 +1,4 @@
-describe('TransactionEnvelope', function() {
+describe.skip('TransactionEnvelope', function() {
 
   it("can successfully decode an envelope", function(done) {
 
