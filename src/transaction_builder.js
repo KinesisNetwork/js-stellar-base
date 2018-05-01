@@ -1,5 +1,5 @@
 import {default as xdr} from "./generated/stellar-xdr_generated";
-import {UnsignedHyper} from "js-xdr";
+import {UnsignedHyper, Hyper} from "js-xdr";
 import {hash} from "./hashing";
 import {Keypair} from "./keypair";
 import {Account} from "./account";
@@ -102,7 +102,7 @@ export class TransactionBuilder {
 
     var attrs = {
       sourceAccount: Keypair.fromPublicKey(this.source.accountId()).xdrAccountId(),
-      fee:           UnsignedHyper.fromString(this.baseFee),
+      fee:           Hyper.fromString(this.baseFee),
       seqNum:        xdr.SequenceNumber.fromString(sequenceNumber.toString()),
       memo:          this.memo ? this.memo.toXDRObject() : null,
       ext:           new xdr.TransactionExt(0)
