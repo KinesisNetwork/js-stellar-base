@@ -2238,7 +2238,7 @@ xdr.union("TransactionExt", {
 // ===========================================================================
 xdr.struct("Transaction", [
   ["sourceAccount", xdr.lookup("AccountId")],
-  ["fee", xdr.lookup("Uint64")],
+  ["fee", xdr.lookup("Int64")],
   ["seqNum", xdr.lookup("SequenceNumber")],
   ["timeBounds", xdr.option(xdr.lookup("TimeBounds"))],
   ["memo", xdr.lookup("Memo")],
